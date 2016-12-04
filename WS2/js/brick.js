@@ -19,5 +19,4 @@ class Brick{
         svg.appendChild(this.element);
     }
 
-    move(){}
 }

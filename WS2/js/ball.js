@@ -47,17 +47,10 @@ class Ball {
         if (this.intersects(brick)){
             this.vy *= -1;
         }
-        return this.intersects(brick);
+       this.intersects(brick);
     }
 
-    intersects(brick){
-        if(this.x >= brick.x && this.x <= brick.x+brick.width && this.y >= brick.y && this.y <= brick.y+brick.height) {
-           return true;
-        }
-        return false;
-    }
-
-    /*intersects(brick) {
+   intersects(brick) {
         var circleDistancex = Math.abs(this.x - (brick.x + brick.width/2));
         var circleDistancey = Math.abs(this.y - (brick.y + brick.height/2));
 
@@ -70,6 +63,6 @@ class Ball {
         var cornerDistance_sq = Math.pow((circleDistancex - brick.width/2),2) + Math.pow((circleDistancey - brick.height/2),2);
 
         return (cornerDistance_sq <= Math.pow(this.cr,2));
-    }*/
+    }
 
 }
